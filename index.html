@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sua Encomenda foi Enviada! - Sérum Redutor Instantâneo</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            /* Fundo degradê mantendo o padrão vermelho lateral e centro claro */
+            background: linear-gradient(to right, #C53A3B 0%, #C53A3B 5%, #f5f7fa 25%, #e0e6ed 75%, #C53A3B 95%, #C53A3B 100%);
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .container {
+            background-color: #ffffff;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+            max-width: 700px;
+            width: 100%;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .header {
+            margin-bottom: 30px;
+        }
+
+        h1 {
+            font-family: 'Playfair Display', serif;
+            color: #C53A3B;
+            font-size: 3em;
+            font-weight: 700;
+            margin-bottom: 10px;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.05);
+        }
+
+        .product-logo {
+            font-size: 1.4em;
+            color: #DAA520;
+            font-weight: 500;
+            letter-spacing: 0.5px;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 1.1em;
+            margin-bottom: 15px;
+            color: #555;
+        }
+
+        .highlight {
+            font-weight: 700;
+            color: #C53A3B;
+        }
+
+        .tracking-section {
+            background-color: #fffaf0;
+            border: 2px solid #DAA520;
+            border-radius: 10px;
+            padding: 25px;
+            margin: 30px 0;
+        }
+
+        .tracking-section h3 {
+            color: #DAA520;
+            font-size: 1.8em;
+            margin-bottom: 20px;
+            font-family: 'Playfair Display', serif;
+        }
+
+        .tracking-code-display {
+            background-color: #f0f0f0;
+            border: 1px dashed #ccc;
+            padding: 15px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            font-family: 'Roboto Mono', monospace; 
+            font-size: 1.3em;
+            font-weight: 700;
+            color: #C53A3B;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .tracking-code-display:hover {
+            background-color: #e0e0e0;
+        }
+
+        .copy-button {
+            background-color: #DAA520;
+            color: white;
+            padding: 8px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 0.9em;
+            font-weight: 500;
+            transition: background-color 0.3s ease;
+        }
+
+        .copy-button:hover {
+            background-color: #e9c46a;
+        }
+
+        .track-button {
+            display: inline-block;
+            background: linear-gradient(90deg, #C53A3B 0%, #DAA520 100%);
+            color: white;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            font-size: 1.2em;
+            font-weight: 700;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            box-shadow: 0 5px 15px rgba(197, 58, 59, 0.3);
+            transition: all 0.3s ease;
+            text-decoration: none;
+            margin-top: 10px;
+            -webkit-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+
+        .track-button:hover {
+            background: linear-gradient(90deg, #DAA520 0%, #C53A3B 100%);
+            box-shadow: 0 8px 20px rgba(218, 165, 32, 0.4);
+            transform: translateY(-2px);
+        }
+
+        .product-image {
+            margin: 30px auto;
+            max-width: 80%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+            /* Placeholder Visual: Remove esta borda após colocar a imagem real */
+            border: 2px dashed #DAA520; 
+            padding: 10px;
+        }
+        
+        .product-image-container {
+            font-size: 0.9em;
+            color: #C53A3B;
+            font-weight: 500;
+        }
+
+        .footer {
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid #eee;
+            color: #777;
+            font-size: 0.9em;
+        }
+
+        .success-message {
+            color: #4CAF50;
+            font-weight: 600;
+            margin-top: 10px;
+            min-height: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="header">
+        <div class="product-logo">O Futuro da sua Pele Chegou!</div>
+        <h1>Ótima Notícia: Seu Sérum Foi Enviado!</h1>
+    </div>
+
+    <p>Olá, <span class="highlight">Cliente Incrível</span>!</p>
+    <p>Estamos super animados para informar que seu pedido do <span class="highlight">Kit Sérum Redutor Instantâneo</span> já está a caminho!</p>
+    <p>Aguarde o prazo de entrega de <span class="highlight">3 a 7 dias úteis</span> para receber a sua transformação.</p>
+
+    <div class="product-image-container">
+        <img src="https://via.placeholder.com/500x300?text=IMAGEM+DO+SEU+KIT+SERUM" alt="Kit Sérum Redutor Instantâneo" class="product-image">
+        <p>*** Substitua o link da imagem acima pela URL do seu produto real. ***</p>
+    </div>
+
+    <div class="tracking-section">
+        <h3>Acompanhe seu Pedido em Tempo Real:</h3>
+        <p>Copie o código abaixo e clique no botão para verificar o status da sua entrega!</p>
+        
+        <div class="tracking-code-display" onclick="copyTrackingCode()">
+            <span id="tracking-code-value">SR-GOLD-01122025</span>
+            <button class="copy-button" type="button">Copiar</button>
+        </div>
+        <div id="copy-status" class="success-message"></div>
+
+        <div class="track-button" onclick="delayedRedirect('https://siteoficial-url.github.io/Rastreamento-KitsSerum/', 2000)">
+            RASTREAR MEU PEDIDO AGORA!
+        </div>
+        
+        <p style="font-size: 0.9em; color: #777; margin-top: 15px;">
+            Você será redirecionado para a página de rastreamento.
+        </p>
+    </div>
+
+    <div class="footer">
+        <p>&copy; 2025 Sua Empresa. Todos os direitos reservados.</p>
+        <p>Agradecemos a sua confiança e preferência!</p>
+    </div>
+</div>
+
+<script>
+    /**
+     * Função para copiar o código de rastreamento para a área de transferência.
+     */
+    function copyTrackingCode() {
+        const trackingCodeElement = document.getElementById('tracking-code-value');
+        const trackingCode = trackingCodeElement.textContent;
+        const copyStatusElement = document.getElementById('copy-status');
+
+        navigator.clipboard.writeText(trackingCode)
+            .then(() => {
+                copyStatusElement.textContent = 'Código copiado com sucesso!';
+                copyStatusElement.style.color = '#4CAF50';
+                setTimeout(() => {
+                    copyStatusElement.textContent = '';
+                }, 3000); 
+            })
+            .catch(err => {
+                console.error('Falha ao copiar o texto: ', err);
+                copyStatusElement.textContent = 'Erro ao copiar o código. Por favor, copie manualmente.';
+                copyStatusElement.style.color = '#FF5733';
+            });
+    }
+
+    /**
+     * Função para atrasar o redirecionamento em 2 segundos.
+     * @param {string} url - O destino do redirecionamento.
+     * @param {number} delay - O tempo de atraso em milissegundos (2000ms = 2s).
+     */
+    function delayedRedirect(url, delay) {
+        const button = document.querySelector('.track-button');
+        const originalText = button.textContent;
+        
+        // Altera o texto do botão para feedback visual
+        button.textContent = 'Aguarde 2 segundos...';
+        
+        setTimeout(() => {
+            window.location.href = url;
+            // Se o redirecionamento falhar, restaura o texto
+            button.textContent = originalText; 
+        }, delay);
+    }
+</script>
+
+</body>
+</html>
